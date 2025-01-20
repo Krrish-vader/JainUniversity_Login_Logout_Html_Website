@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome, <span id="welcome-name"></span>!</h1>
+    <p>You have successfully registered. <a href="index.html">Logout</a></p>
+
+    <script>
+        // Example of capturing student's name from URL query string or session
+        const urlParams = new URLSearchParams(window.location.search);
+        const studentName = urlParams.get('studentName');
+        document.getElementById('welcome-name').textContent = studentName || 'Student';
+    </script>
+</body>
+</html>
